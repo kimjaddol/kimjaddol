@@ -1,0 +1,78 @@
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	padding : 10px;
+}
+
+hr {
+	border : 0;
+	border-top : 1px solid #6441a5 !important;
+}
+
+a, a:link, a:hover, a:visited {
+    text-decoration: none;
+}
+
+.main-container {
+    max-width: 1200px;
+}
+
+.logo {
+	display: block;
+	margin : 10vh auto;	
+	max-width : 50vw;
+}
+
+
+.tablestyle{
+	display: table;
+	background: white;
+}
+
+.thumb{
+    border-radius: 16px;
+	width: 64px;
+	height: 64px;
+}
+
+.title{
+	color : #6441a5;
+	font-size: 24px;
+	display : block;
+}
+
+.uptime{
+	display : block;
+
+}
+
+.spacer{
+	margin-top: 10px;
+}
+.info{
+	display: inline-grid;
+}
+
+.info-wrapper{
+	border: 2px solid #6441a5;
+    padding: 10px;
+}
+
+.broad-off{
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+.icon{
+	height : 32px;
+	width : 32px;
+	margin-right : 10px;
+}
+.icon-area{
+	margin : 10px 0;
+	width : 100%;
+	display: block;
+}
