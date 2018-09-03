@@ -25,6 +25,9 @@ var ref_kim = db.ref('kim').limitToLast(1);
 var ref_ja = db.ref('ja').limitToLast(1);
 var ref_ddol = db.ref('ddol').limitToLast(1);
 
+var tgd_kim = db.ref('tgd/kim').limitToLast(3);
+var tgd_ja = db.ref('tgd/ja').limitToLast(3);
+var tgd_ddol = db.ref('tgd/ddol').limitToLast(3);
 
 var now = new Date();
 
@@ -46,7 +49,6 @@ ref_kim.once("value", function(snapshot) {
 }, function(error) {
 	console.log(error);
 });
-
 
 ref_ja.once("value", function(snapshot) {
 	var ja = snapshot.val();
@@ -81,4 +83,22 @@ ref_ddol.once("value", function(snapshot) {
 	}
 }, function(error) {
 	console.log(error);
+});
+
+tgd_kim.once("value", function(snapshot){
+  var data = snapshot.val()
+  for(var i in data)
+    $( "#tgd_Kim" ).prepend( "<a target='_blank' href=https://tgd.kr/kimdoe/"+data[i].url+"><p>"+data[i].title+"</p></a>" );
+});
+
+tgd_ja.once("value", function(snapshot){
+  var data = snapshot.val()
+  for(var i in data)
+    $( "#tgd_Ja" ).prepend( "<a target='_blank' href=https://tgd.kr/tranth/"+data[i].url+"><p>"+data[i].title+"</p></a>" );
+});
+
+tgd_ddol.once("value", function(snapshot){
+  var data = snapshot.val()
+  for(var i in data)
+    $( "#tgd_DDol" ).prepend( "<a target='_blank' href=https://tgd.kr/jungtaejune/"+data[i].url+"><p>"+data[i].title+"</p></a>" );
 });
